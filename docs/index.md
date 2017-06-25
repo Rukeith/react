@@ -1,15 +1,15 @@
 ---
 layout: hero
-title: A JavaScript library for building user interfaces
+title: 一個用於建立使用者介面的 JavaScript library
 id: home
 ---
 
 <section class="light home-section">
   <div class="marketing-row">
     <div class="marketing-col">
-      <h3>Declarative</h3>
-      <p>React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.</p>
-      <p>Declarative views make your code more predictable and easier to debug.</p>
+      <h3>宣告</h3>
+      <p>React 讓創建使用者互動 UI 變得非常輕鬆。為你的應用程式的每一個狀態設計簡單的視圖，在資料改變的時候 React 將會有效率的更新並渲染元件。</p>
+      <p>宣告視圖可以讓你的程式碼可更易於預測和除錯。</p>
     </div>
     <div class="marketing-col">
       <h3>Component-Based</h3>

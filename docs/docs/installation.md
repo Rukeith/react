@@ -1,6 +1,6 @@
 ---
 id: installation
-title: Installation
+title: 安裝
 permalink: docs/installation.html
 redirect_from:
   - "download.html"
@@ -17,7 +17,7 @@ next: hello-world.html
   }
 </style>
 
-React is flexible and can be used in a variety of projects. You can create new apps with it, but you can also gradually introduce it into an existing codebase without doing a rewrite.
+React 具有彈性可被用於多種專案中。你可以使用它建議新的應用程式，也可以逐步的加入現有的程式碼中，而不需要重寫。
 
 <div class="toggler">
   <style>
@@ -85,40 +85,40 @@ React is flexible and can be used in a variety of projects. You can create new a
   <script>
     document.querySelector('.toggler').parentElement.className += ' display-target-fiddle';
   </script>
-  <span>Which of these options best describes what you want to do?</span>
+  <span>以下哪個選項最貼近你想做的事呢？</span>
   <br />
   <br />
    <ul role="tablist" >
       <li id="fiddle" class="button-fiddle" aria-selected="false" role="tab" tabindex="0" aria-controls="fiddletab"
           onclick="display('target', 'fiddle')" onkeyup="keyToggle(event, 'fiddle', 'existingapp', 'newapp')">
-        Try React
+        嘗試 React
       </li>
       <li id="newapp" class="button-newapp" aria-selected="false" role="tab" tabindex="-1" aria-controls="newapptab"
           onclick="display('target', 'newapp')" onkeyup="keyToggle(event, 'newapp', 'fiddle', 'existingapp')">
-        Create a New App
+        建立一個新的應用程式
       </li>
       <li id="existingapp" class="button-existingapp" aria-selected="false" role="tab" tabindex="-1" aria-controls="existingapptab"
           onclick="display('target', 'existingapp')" onkeyup="keyToggle(event, 'existingapp', 'newapp', 'fiddle')">
-        Add React to an Existing App
+        把 React 添加到現有的應用程式
       </li>
     </ul>
 </div>
 
-<block id="fiddletab" role="tabpanel" class="fiddle"  />
+<block id="fiddletab" role="tabpanel" class="fiddle"/>
 
-## Trying Out React
+## 嘗試 React
 
-If you're just interested in playing around with React, you can use CodePen. Try starting from [this Hello World example code](http://codepen.io/gaearon/pen/rrpgNB?editors=0010). You don't need to install anything; you can just modify the code and see if it works.
+如果你只是想嘗試一下 React，你可以使用 CodePen。首先從[這個 Hello World 範例程式碼](http://codepen.io/gaearon/pen/rrpgNB?editors=0010)開始。你不需要安裝任何東西，你可以只修改程式碼並看它如何運作的。
 
-If you prefer to use your own text editor, you can also <a href="/react/downloads/single-file-example.html" download="hello.html">download this HTML file</a>, edit it, and open it from the local filesystem in your browser. It does a slow runtime code transformation, so don't use it in production.
+如果你比較喜歡使用你個人的編輯器，你也可以<a href="/react/downloads/single-file-example.html" download="hello.html">下載這個 HTML 檔案</a>來編輯，再用你的瀏覽器從本地的檔案系統打開它。它會執行一個緩慢的程式碼轉換，所以不要再生產環境中使用。
 
-If you want to use it for a full application, there are two popular ways to get started with React: using Create React App, or adding it to an existing application.
+如果你想要在一整個應用程式中使用，有兩種主要的方式：建立 React 應用程式或添加 React 到現有應用程式。
 
 <block id="newapptab" role="tabpanel" class="newapp" />
 
-## Creating a New Application
+## 建立一個新的應用程式
 
-[Create React App](http://github.com/facebookincubator/create-react-app) is the best way to start building a new React single page application. It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production.
+[建立 React 應用程式](http://github.com/facebookincubator/create-react-app) 是開始建立新的 React 單頁應用程式的最好方法。它設置好了你的開發環境，所以你可以使用最新的 JavaScript 特性，提供一個好的開發體驗並為了生產環境優化你的應用程式。
 
 ```bash
 npm install -g create-react-app
@@ -128,59 +128,60 @@ cd my-app
 npm start
 ```
 
-Create React App doesn't handle backend logic or databases; it just creates a frontend build pipeline, so you can use it with any backend you want. It uses build tools like Babel and webpack under the hood, but works with zero configuration.
+建立 React 應用程式不會處理後端邏輯或資料庫。它只會建立一個前端建構通道，所以你可以使用它來串接任何你想要的後端。它可以使用像是 Babel 和 Webpack 的建構工具，也可以在沒有配置的，也可以在沒有配置之下運作。
 
-When you're ready to deploy to production, running `npm run build` will create an optimized build of your app in the `build` folder. You can learn more about Create React App [from its README](https://github.com/facebookincubator/create-react-app#create-react-app-) and the [User Guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#table-of-contents).
+當你準備要部署到生產環境時，執行 `npm run build` 將會在 `build` 目錄中建立一個優化好的應用程式。你可以從 [README](https://github.com/facebookincubator/create-react-app#create-react-app-) 和[使用者指南](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#table-of-contents)暸解更多資訊。
 
 <block id="existingapptab" role="tabpanel" class="existingapp" />
 
-## Adding React to an Existing Application
+## 把 React 添加到現有的應用程式
 
-You don't need to rewrite your app to start using React.
+你不需要為了使用 React 而重構你的應用程式。
 
-We recommend adding React to a small part of your application, such as an individual widget, so you can see if it works well for your use case.
+我們建議先將 React 添加到應用程式中的一小部分，例如一個獨立的小插件，以便你查看是否運作正常。
 
-While React [can be used](/react/docs/react-without-es6.html) without a build pipeline, we recommend setting it up so you can be more productive. A modern build pipeline typically consists of:
+雖然 React [可以使用](/react/docs/react-without-es6.html)在沒有任何建構通道的情況。但為了有更多的生產力，我們建議還是要設置它。現今的建構通道包括：
 
-* A **package manager**, such as [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/). It lets you take advantage of a vast ecosystem of third-party packages, and easily install or update them.
-* A **bundler**, such as [webpack](https://webpack.js.org/) or [Browserify](http://browserify.org/). It lets you write modular code and bundle it together into small packages to optimize load time.
-* A **compiler** such as [Babel](http://babeljs.io/). It lets you write modern JavaScript code that still works in older browsers.
+* **套件管理器**，例如 [Yarn](https://yarnpkg.com/) 或 [npm](https://www.npmjs.com/)。它能讓你使用龐大的第三方套件生態系統，並且能輕鬆的安裝或升級這些套件。
+它可以让你使用庞大的第三方软件包生态系统，还能很方便的安装或升级。
+* **包裝器**，例如 [webpack](https://webpack.js.org/) 或 [Browserify](http://browserify.org/)。它能讓你編寫模組化程式碼並且壓縮檔案來優化載入時間。
+* **編譯器**，例如 [Babel](http://babeljs.io/)。它能讓你用含有最新特性的 JavaScript 程式碼運行在舊版的瀏覽器。
 
-### Installing React
+### 安裝 React
 
->**Note:**
+>**注意:**
 >
->Once installed, we strongly recommend setting up a [production build process](/react/docs/optimizing-performance.html#use-the-production-build) to ensure you're using the fast version of React in production.
+>一旦安裝後，我們強烈建議設置[生產建構程序](/react/docs/optimizing-performance.html#use-the-production-build)以確保你在生產環境使用最新版的 React。
 
-We recommend using [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/) for managing front-end dependencies. If you're new to package managers, the [Yarn documentation](https://yarnpkg.com/en/docs/getting-started) is a good place to get started.
+我們建議使用 [Yarn](https://yarnpkg.com/) 或 [npm](https://www.npmjs.com/) 來管理前端相依性。如果你還未使用過套件管理器，[Yarn 文件](https://yarnpkg.com/en/docs/getting-started) 會是一個不錯的開始。
 
-To install React with Yarn, run:
+使用 Yarn 安裝 React，執行:
 
 ```bash
 yarn init
 yarn add react react-dom
 ```
 
-To install React with npm, run:
+使用 npm 安裝 React，執行:
 
 ```bash
 npm init
 npm install --save react react-dom
 ```
 
-Both Yarn and npm download packages from the [npm registry](http://npmjs.com/).
+Yarn 和 npm 都會從 [npm registry](http://npmjs.com/) 下載套件。
 
-### Enabling ES6 and JSX
+### 使用 ES6 和 JSX
 
-We recommend using React with [Babel](http://babeljs.io/) to let you use ES6 and JSX in your JavaScript code. ES6 is a set of modern JavaScript features that make development easier, and JSX is an extension to the JavaScript language that works nicely with React.
+我們建議使用 [Babel](http://babeljs.io/) 搭配 React，來讓你可以在你的 JavaScript 程式碼中使用 ES6 和 JSX。ES6 是一系列最新 JavaScript 特性，能讓開發變得更簡單，而 JSX 是與 React 搭配使用的 JavaScript 語言的擴展。
 
-The [Babel setup instructions](https://babeljs.io/docs/setup/) explain how to configure Babel in many different build environments. Make sure you install [`babel-preset-react`](http://babeljs.io/docs/plugins/preset-react/#basic-setup-with-the-cli-) and [`babel-preset-es2015`](http://babeljs.io/docs/plugins/preset-es2015/#basic-setup-with-the-cli-) and enable them in your [`.babelrc` configuration](http://babeljs.io/docs/usage/babelrc/), and you're good to go.
+[Babel 設置說明](https://babeljs.io/docs/setup/) 說明如何在不同的建構環境中做設定。確認你已經安裝 [`babel-preset-react`](http://babeljs.io/docs/plugins/preset-react/#basic-setup-with-the-cli-) 和 [`babel-preset-es2015`](http://babeljs.io/docs/plugins/preset-es2015/#basic-setup-with-the-cli-) 並且在 [`.babelrc` configuration](http://babeljs.io/docs/usage/babelrc/) 中啟動它們，接下來你就準備好接下去了。
 
-### Hello World with ES6 and JSX
+### 在 Hello Wrorld 中使用 ES6 的 JSX
 
-We recommend using a bundler like [webpack](https://webpack.js.org/) or [Browserify](http://browserify.org/) so you can write modular code and bundle it together into small packages to optimize load time.
+我們建議使用包裝器如 [webpack](https://webpack.js.org/) 或 [Browserify](http://browserify.org/) 以便於編寫模組程式碼並將其壓縮成小套件，優化載入時間。
 
-The smallest React example looks like this:
+下面是最基本的 React 範例：
 
 ```js
 import React from 'react';
@@ -192,46 +193,49 @@ ReactDOM.render(
 );
 ```
 
-This code renders into a DOM element with the id of `root` so you need `<div id="root"></div>` somewhere in your HTML file.
+这段代码会将其渲染入一个 ID 为 root 的 DOM 元素，所以在你的 HTML 文件中需要有 <div id="root"></div>。
 
-Similarly, you can render a React component inside a DOM element somewhere inside your existing app written with any other JavaScript UI library.
+类似以上，你可以在任何由其他 JavaScript UI 库编辑的现有应用中，将 React 渲染进一个 DOM 元素。
+這段程式碼會在一個 id 為 `root` 的 DOM 元素中渲染，所以你需要在你的 HTML 檔案中有 `<div id="root"></div>`。
 
-[Learn more about integrating React with existing code.](/react/docs/integrating-with-other-libraries.html#integrating-with-other-view-libraries)
+同樣地，你可以將 React 渲染到任何由其他 JavaScript UI library 寫成的現有應用程式中的一個 DOM 元素。
 
-### Development and Production Versions
+[暸解更多 React 集成現有程式碼的資訊](/react/docs/integrating-with-other-libraries.html#integrating-with-other-view-libraries)
 
-By default, React includes many helpful warnings. These warnings are very useful in development.
+### 開發和生產版本
 
-**However, they make the development version of React larger and slower so you should use the production version when you deploy the app.**
+預設情況下，React 含有很多有用的警告，這些警告在開發中非常有用。
 
-Learn [how to tell if your website is serving the right version of React](/react/docs/optimizing-performance.html#use-the-production-build), and how to configure the production build process most efficiently:
+**然而，這些將使開發版本的 React 體積更大且運行較慢，所以你應該在部署應用程式時使用生產版本。**
 
-* [Creating a Production Build with Create React App](/react/docs/optimizing-performance.html#create-react-app)
-* [Creating a Production Build with Single-File Builds](/react/docs/optimizing-performance.html#single-file-builds)
-* [Creating a Production Build with Brunch](/react/docs/optimizing-performance.html#brunch)
-* [Creating a Production Build with Browserify](/react/docs/optimizing-performance.html#browserify)
-* [Creating a Production Build with Rollup](/react/docs/optimizing-performance.html#rollup)
-* [Creating a Production Build with webpack](/react/docs/optimizing-performance.html#webpack)
+暸解[如何判斷你的網站是否使用合適的版 React 版本](/react/docs/optimizing-performance.html#use-the-production-build)，以及如何設置更有效率的生產建構程序：
 
-### Using a CDN
+* [使用 Create React App 建立應用程式](/react/docs/optimizing-performance.html#create-react-app)
+* [使用單一檔案建立應用程式](/react/docs/optimizing-performance.html#single-file-builds)
+* [使用 Brunch 建立應用程式](/react/docs/optimizing-performance.html#brunch)
+* [使用 Browserify 建立應用程式](/react/docs/optimizing-performance.html#browserify)
+* [使用 Rollup 建立應用程式](/react/docs/optimizing-performance.html#rollup)
+* [使用 Webpack 建立應用程式](/react/docs/optimizing-performance.html#webpack)
 
-If you don't want to use npm to manage client packages, the `react` and `react-dom` npm packages also provide single-file distributions in `dist` folders, which are hosted on a CDN:
+### 使用 CDN
+
+如果你不想使用 npm 来管理套件，`react` 和 `react-dom` npm 套件也提供發佈在 `dist` 目錄的單一檔案並託管在 CDN 上。
 
 ```html
 <script src="https://unpkg.com/react@15/dist/react.js"></script>
 <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
 ```
 
-The versions above are only meant for development, and are not suitable for production. Minified and optimized production versions of React are available at:
+以上版本僅適用於開發環境，不適合生產環境。壓縮和優化後的 React 生產環境版本如下：
 
 ```html
 <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
 <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
 ```
 
-To load a specific version of `react` and `react-dom`, replace `15` with the version number.
+如果想要載入特定版本的 `react` 和 `react-dom`，用版本號替换 `15`。
 
-If you use Bower, React is available via the `react` package.
+如果你使用 Bower，可以透過 `react` 套件來使用 React。
 
 <script>
 /**
